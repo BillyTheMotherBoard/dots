@@ -1,0 +1,78 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hustler!</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+   <!-- <img src="assets/gab.jpg">-->
+    <div id="container">
+        <div id="blocked">
+            <div id="logo"> ホームページ</div>
+            <div id="dial">
+                <table>
+                    <tr>
+                        <td>news</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="http://bloomberg.com">blm</a></td>
+                        <td lnk><a target="_blank" href="http://wsj.com">wsj</a></td>
+                        <td lnk><a target="_blank" href="http://ft.com">fnt</a></td>
+                        <td lnk><a target="_blank" href="http://www.sciencenews.org/">scn</a></td>
+                    </tr>
+                    <tr>
+                        <td>coding</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="https://docs.python.org/3/">pyd</a></td>
+                        <td lnk><a target="_blank" href="https://www.quantopian.com/">qtp</a></td>
+                        <td lnk><a target="_blank" href="https://github.com/">git</a></td>
+                        <td lnk><a target="_blank" href="https://www.geeksforgeeks.org/">gfg</a></td>
+                    </tr>
+                    <tr>
+                        <td>maths</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="http:mathraining.be">mtr</a></td>
+                        <td lnk><a target="_blank" href="http://wikipedia.com">wkp</a></td>
+                        <td lnk><a target="_blank" href="https://projecteuler.net/">pel</a></td>
+                        <td lnk><a target="_blank" href="https://fr.khanacademy.org">kha</a></td>
+                    </tr>
+                    <tr>
+                        <td>learn</td>
+                        <td arr>»</td>
+                        <td lnk><a target="_blank" href="http://quora.com">qra</a></td>
+                        <td lnk><a target="_blank" href="http://medium.com">med</a></td>
+                        <td lnk><a target="_blank" href="http://reddit.com">rdt</a></td>
+                        <td lnk><a target="_blank" href="http://youtube.com">ytb</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="search">
+                <form method="get" action="http://duckduckgo.com">
+                    <input name="q" type="text" placeholder="search" />
+                </form>
+            </div>
+        </div>
+<script type="text/javascript" src="assets/jquery.min.js"></script>
+<script type="text/javascript">
+var cl = function() {
+	var ca = ["#d08770", "#a3be8c", "#ebcb8b", "#96b5b4", "#a7adba", "#bf616a", "#8fa1b3"];
+	$("td[lnk]").each(function(){
+		var r = ca[~~(Math.random() * ca.length)];
+		$(this).css("background-color", r);
+	});
+};
+var rl = function(){
+	var l = $('#logo');
+	var cr = l.text().split("");
+	l.empty();
+	$.each(cr, function (i, e) {
+	    l.append('<span>' + e + '</span>');
+	});
+}
+$(function(){
+	var a = setInterval(cl,200);
+	var b = rl();
+});
+</script>
+</body>
+</html>
